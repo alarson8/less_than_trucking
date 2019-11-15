@@ -12,7 +12,7 @@ How to:
 Use ruby 2.4.6
 gem install bundler
 bundle install
-bundle exec rspec spec (should see green tests)
+bundle exec rspec spec (should see green test)
 
 
 

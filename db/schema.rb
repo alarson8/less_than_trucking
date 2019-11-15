@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_11_15_033149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "random_fulfillments", force: :cascade do |t|
+    t.boolean "best_capacity", default: false, null: false
+    t.boolean "best_deliveries", default: false, null: false
+    t.jsonb "log", default: "{}", null: false
+    t.integer "deliveries", null: false
+    t.integer "remaining_capacity", null: false
+    t.float "average_equal_distribution"
+    t.integer "seconds_since_epoch"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
