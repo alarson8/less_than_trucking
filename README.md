@@ -1,4 +1,4 @@
-Strategy - Random Filling, Until all the shipments have been delivered, start with a random empty truck and load it until the next shipment will not fit. That truck is then logged as a delivery and then this process continues with all remaining empty trucks.  If shipments remain and all trucks are out for delivery, they are considered unloaded and requeued to continue the loading process.
+Strategy - Random Filling, Until all the shipments have been delivered, start with a random empty truck and load it until the next shipment will not fit. That truck is then logged as a delivery and then this process continues with all remaining empty trucks.  If shipments remain and all trucks are out for delivery, they are considered unloaded and requeued to continue the loading process. Equally distributed amongst cars that are out for delivery
 
 
 Pros - Abstract from assumptions and let results help draw conclusions of best packing strategies
@@ -13,9 +13,9 @@ How to:
 Use ruby 2.4.6
 gem install bundler
 bundle install
-bundle exec rspec spec (should see green test)
 
+bundle exec rake db:create
+bundle exec rake db:migrate
+bundle exec rake db:migrate RAILS_ENV=test
 
-
--- tbd rake db:create
--- tbd rake db:migrate
+bundle exec rspec spec (should see green tests)

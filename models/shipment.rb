@@ -5,4 +5,11 @@ class Shipment
     @id = id
     @capacity = capacity
   end
+
+  def to_h
+    {
+      id: id,
+      capacity: capacity,
+    }
+  end
 end

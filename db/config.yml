@@ -6,4 +6,8 @@ default: &default
 
 development:
   <<: *default
-  database: burger_development
+  database: less_than_trucking_development
+
+test:
+  <<: *default
+  database: less_than_trucking_test
